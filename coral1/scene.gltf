@@ -1,0 +1,389 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 24622,
+      "max": [
+        1.660599946975708,
+        1.5895216464996338,
+        -2.8916919231414795
+      ],
+      "min": [
+        1.4359725713729858,
+        1.3615399599075317,
+        -3.0266549587249756
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 295464,
+      "componentType": 5126,
+      "count": 24622,
+      "max": [
+        0.99998444318771362,
+        0.99997556209564209,
+        0.99985837936401367
+      ],
+      "min": [
+        -0.99999088048934937,
+        -0.99906355142593384,
+        -0.99998623132705688
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 24622,
+      "max": [
+        0.99984574317932129,
+        0.99994713068008423,
+        0.99982470273971558,
+        1
+      ],
+      "min": [
+        -0.99992668628692627,
+        -0.99995267391204834,
+        -0.99979192018508911,
+        -1
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 24622,
+      "max": [
+        0.88605600595474243,
+        1
+      ],
+      "min": [
+        0.00032200000714510679,
+        0.0025090000126510859
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 137283,
+      "max": [
+        24621
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 590928,
+      "componentType": 5126,
+      "count": 1630,
+      "max": [
+        1.5786899328231812,
+        1.5895216464996338,
+        -2.9189202785491943
+      ],
+      "min": [
+        1.4359725713729858,
+        1.4175513982772827,
+        -2.9593369960784912
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 610488,
+      "componentType": 5126,
+      "count": 1630,
+      "max": [
+        0.96699047088623047,
+        0.99997556209564209,
+        0.99981629848480225
+      ],
+      "min": [
+        -0.99985545873641968,
+        -0.99865055084228516,
+        -0.9258042573928833
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 393952,
+      "componentType": 5126,
+      "count": 1630,
+      "max": [
+        0.96666908264160156,
+        0.9709012508392334,
+        0.99918597936630249,
+        1
+      ],
+      "min": [
+        -0.99904143810272217,
+        -0.99920850992202759,
+        -0.99762862920761108,
+        -1
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 196976,
+      "componentType": 5126,
+      "count": 1630,
+      "max": [
+        0.062744140625,
+        0.07666015625
+      ],
+      "min": [
+        0,
+        0
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 549132,
+      "componentType": 5125,
+      "count": 8055,
+      "max": [
+        1629
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "Lauren Olinger (https://sketchfab.com/l.olinger)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/51-ptilocaulis-walpersii-19620d36e1d54d60bad660b09b5296aa",
+      "title": "#51: Ptilocaulis walpersii"
+    },
+    "generator": "Sketchfab-4.97.2",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 581352,
+      "byteOffset": 0,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 210016,
+      "byteOffset": 581352,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 630048,
+      "byteOffset": 791368,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 420032,
+      "byteOffset": 1421416,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 1841448,
+      "uri": "scene.bin"
+    }
+  ],
+  "extensionsUsed": [
+    "KHR_materials_unlit"
+  ],
+  "images": [
+    {
+      "uri": "textures/GeneratedMat1_baseColor.png"
+    },
+    {
+      "uri": "textures/Pwalp_51_baseColor.jpeg"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "extensions": {
+        "KHR_materials_unlit": {}
+      },
+      "name": "GeneratedMat1",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "baseColorTexture": {
+          "index": 0,
+          "texCoord": 0
+        },
+        "metallicFactor": 0,
+        "roughnessFactor": 1
+      }
+    },
+    {
+      "doubleSided": true,
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "extensions": {
+        "KHR_materials_unlit": {}
+      },
+      "name": "Pwalp_51",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "baseColorTexture": {
+          "index": 1,
+          "texCoord": 0
+        },
+        "metallicFactor": 0,
+        "roughnessFactor": 1
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 6,
+            "POSITION": 5,
+            "TANGENT": 7,
+            "TEXCOORD_0": 8
+          },
+          "indices": 9,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "name": "RootNode (gltf orientation matrix)",
+      "rotation": [
+        -0.70710678118654746,
+        -0,
+        -0,
+        0.70710678118654757
+      ]
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        0.99930697679519653,
+        0.032796557992696762,
+        -0.017604976892471313,
+        0,
+        -0.004172897431999445,
+        -0.37127277255058289,
+        -0.92851448059082031,
+        0,
+        -0.036988329142332077,
+        0.92794442176818848,
+        -0.37087863683700562,
+        0,
+        -0.10222447663545609,
+        4.7185201644897461,
+        -2.6593523025512695,
+        1
+      ],
+      "name": "RootNode (model correction matrix)"
+    },
+    {
+      "children": [
+        3,
+        4
+      ],
+      "name": "Pwalp_51_trimmed_cleaned_0223.obj.cleaner.materialmerger.gles"
+    },
+    {
+      "mesh": 0,
+      "name": ""
+    },
+    {
+      "mesh": 1,
+      "name": ""
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "OSG_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    }
+  ]
+}
+
