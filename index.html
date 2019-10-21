@@ -21,6 +21,10 @@
       
       <a-sound src="underwatershort.m4a" autoplay="true" loop="true" volume="1"></a-sound>
       
+      <!-- Sea Floor -->
+      <a-gltf-model src="seafloor/scene.gltf" position="0 -20 0" scale="10 10 10"></a-gltf-model>
+      <a-plane width="300" height="230" rotation="-91 0 0" position="0 -22 0" opacity="0.6" src="seafloor2.jpg"></a-plane>
+      
       <a-entity id="rig"
         movement-controls="fly: true; speed: 1.5">
         <a-entity camera
@@ -75,10 +79,6 @@
             <a-animation attribute="visible" delay="25000" to="true"></a-animation>
         </a-ocean>
       </a-entity>
-      
-      <!-- Sea Floor -->
-      <a-gltf-model src="seafloor/scene.gltf" position="0 -20 0" scale="10 10 10"></a-gltf-model>
-      <a-plane width="300" height="230" rotation="-91 0 0" position="0 -22 0" opacity="0.6" src="seafloor2.jpg"></a-plane>
       
       <a-sphere src="#boxTexture" position="5 -5 -15" rotation="0 45 45" scale="1 1 1"
                 animation__position="property: object3D.position.y; to: -2; dir: alternate; dur: 2000; loop: true"
