@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Katie's Underwater Scene</title>
+    <meta name="description" content="Created with AFrame">
+    <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.0.1/dist/aframe-extras.min.js"></script>
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.0.1/dist/aframe-extras.min.js"></script>
+    <script src="https://github.com/donmccurdy/aframe-extras/blob/master/src/loaders/fbx-model.js"></script>
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v5.0.1/dist/aframe-extras.min.js" ></script>
+    <script src="https://github.com/donmccurdy/aframe-extras/blob/master/src/primitives/a-ocean.js"></script>
+    
+    <!--SOURCES
+    3D Coral Models: Sketchfab Artist Lauren Olinger    
+    3D Coral Models: Sketchfab Artist Ben M. Ritt 
+    -->
+  </head>
+  <body>
+    <a-scene>
+      
+      <a-sound src="underwater.mp3" autoplay="true" loop="true" volume="1"></a-sound>
+      
+      <a-entity id="rig"
+        movement-controls="fly: true; speed: 1.5">
+        <a-entity camera
+            position="0 1.6 0"
+            look-controls wasd-controls>
+          <a-entity cursor="fuse: true; fuseTimeout: 500"
+            position="0 0 -1"
+            geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+            material="color: black; shader: flat">
+          </a-entity>
+        </a-entity>
+      </a-entity>
+      
+      <a-assets>
+        <!-- GLTF Animated Models -->
+        
+        <a-asset-item id="rainbowfish" response-type="arraybuffer" src="rainbowfish/scene.gltf"></a-asset-item>
+        <a-asset-item id="orangefish" response-type="arraybuffer" src="orangefish/scene.gltf"></a-asset-item>
+        <a-asset-item id="dolphin" response-type="arraybuffer" src="dolphin/scene.gltf"></a-asset-item>
+        <a-asset-item id="jellyfish" response-type="arraybuffer" src="jellyfish/scene.gltf"></a-asset-item>
+        <a-asset-item id="nemofish" response-type="arraybuffer" src="nemofish/scene.gltf"></a-asset-item>
+        
+        <!-- Texture Sources -->
+        <img id="skyTexture" src="blue.jpg">
+        <img id="sandTexture" src="sand.jpg">
+        <img id="boxTexture" src="bubble.jpg">
+        
+      </a-assets>
+      
+      <a-entity position="6 -0.5 -3" 
+                animation="property: rotation; from: 0 0 0; to: 0 360 0; dur: 7800; loop: true; easing: easeInOutQuad">
+                <a-entity gltf-model="#rainbowfish" position="30 -10 30" rotation="0 100 0" scale=".1 .1 .1" animation-mixer="clip:Take 001; loop:2; timeScale: 1; crossFadeDuration: 1"></a-entity>
+      </a-entity>
+      <a-entity position="50 0 50" 
+                animation="property: rotation; from: 0 0 0; to: 0 360 0; dur: 12800; loop: true; easing: easeInOutQuad">
+                <a-entity gltf-model="#orangefish" scale=".1 .1 .1" position="-15 -21  -21" rotation="0 230 0" animation-mixer="clip:Take 001; loop:2; timeScale: 0.5; crossFadeDuration: 1"></a-entity>
+      </a-entity>
+      <a-entity position="6 -0.5 -3"
+                animation="property: rotation; from: 0 0 0; to: 0 360 0; dur: 30000; loop: true; easing: easeInOutQuad">
+                <a-entity gltf-model="#dolphin" scale=".1 .1 .1" rotation="15 -40 0" position="100 0 100" animation-mixer="clip:Take 001; loop:2; timeScale: 1; crossFadeDuration: 1"></a-entity>
+      </a-entity>
+      <a-entity position="60 -10 -90"
+                animation="property: rotation; from: 0 0 0; to: 0 360 0; dur: 30000; loop: true; easing: easeInOutQuad">
+                <a-entity gltf-model="#jellyfish" scale="4 4 4" position="40 -20 -30" rotation="0 160 0" animation-mixer="clip:Take 001; loop:2; timeScale: 1; crossFadeDuration: 1"></a-entity>
+      </a-entity>
+      <a-entity position="-15 5 -5" 
+                animation="property: rotation; from: 0 0 0; to: 0 360 0; dur: 5000; loop: true; easing: easeInOutQuad"><a-entity gltf-model="#nemofish" scale="1 1 1" rotation="0 90 0" position="-20 10 10" animation-mixer="clip:Take 001; loop:2; timeScale: 1; crossFadeDuration: 1"></a-entity>
+      </a-entity>
+      
+      <a-entity position="0 800 0" color="#b6e8fe" rotation="90 0 0" scale="40 40 40" visible="">
+        <a-ocean width="150" depth="150" density="40" ocean="" rotation="" position="" scale="" visible="">
+            <a-animation attribute="visible" delay="25000" to="true"></a-animation>
+        </a-ocean>
+      </a-entity>
+      
+      <!-- Sea Floor -->
+      <a-gltf-model src="seafloor/scene.gltf" position="0 -20 0" scale="10 10 10"></a-gltf-model>
+      <a-plane width="300" height="230" rotation="-91 0 0" position="0 -22 0" opacity="0.6" src="seafloor2.jpg"></a-plane>
+      
+      <a-sphere src="#boxTexture" position="5 -5 -15" rotation="0 45 45" scale="1 1 1"
+                animation__position="property: object3D.position.y; to: -2; dir: alternate; dur: 2000; loop: true"
+                animation__mouseenter="property: position; to: 0 200 -5; dur: 7000; startEvents: mouseenter"></a-sphere>
+      <a-sphere src="#boxTexture" position="-15 -12 15" rotation="0 45 45" scale="1 1 1"
+                animation__position="property: object3D.position.y; to: -8; dir: alternate; dur: 2500; loop: true"
+                animation__mouseenter="property: position; to: 0 200 -5; dur: 7000; startEvents: mouseenter"></a-sphere>
+      <a-sphere src="#boxTexture" position="25 -17 -10" rotation="0 45 45" scale="1 1 1"
+                animation__position="property: object3D.position.y; to: -13; dir: alternate; dur: 1600; loop: true"
+                animation__mouseenter="property: position; to: 0 200 -5; dur: 7000; startEvents: mouseenter"></a-sphere>
+      
+      <!-- Coral Reef Models -->
+      <a-gltf-model src="coral1/scene.gltf" position="-25 49 15" scale="20 20 20" rotation="0 0 0"></a-gltf-model>
+      <a-gltf-model src="coral2/scene.gltf" position="-3 -10 -12" scale="35 35 35" rotation="0 45 0"></a-gltf-model>
+      <a-gltf-model src="coral3/scene.gltf" position="1 -9 -25" scale="10 10 10" rotation="0 70 0"></a-gltf-model>
+      <a-gltf-model src="coral4/scene.gltf" position="-19 -18.9w -25" scale="15 15 15" rotation="0 70 0"></a-gltf-model>
+      <a-gltf-model src="coral5/scene.gltf" position="-21 -17 -26" scale="15 15 15" rotation="-45 60 0"></a-gltf-model>
+      <a-gltf-model src="coral2/scene.gltf" position="-1 -24 -40" scale="35 35 35" rotation="0 -90 -20"></a-gltf-model>-->
+
+      <!-- Moving Lights -->
+      <a-light type="ambient" color="#222" position="0 30 0"></a-light>
+      <a-light animation="property: position; 
+                          from: -10 10 -80; 
+                          to: -100 100 100; 
+                          dur: 2000;
+                          loop: true;
+                          dir: alternate" 
+               type="point" intensity="0.45" position="1 10 20" color="#7194ab"></a-light>
+      <a-light animation="property: position; 
+                          from: -20 5 20; 
+                          to: 90 100 -100; 
+                          dur: 2100;
+                          loop: true;
+                          dir: alternate" 
+               type="point" intensity="0.45" position="1 10 20" color="#7194ab"></a-light>
+      <a-light animation="property: position; 
+                          from: -90 100 -160; 
+                          to: 80 10 80; 
+                          dur: 2200;
+                          loop: true;
+                          dir: alternate" 
+               type="point" intensity="0.45" position="1 10 20" color="#7194ab"></a-light>
+      <a-light animation="property: position; 
+                          from: -80 100 180; 
+                          to: 0 30 -50; 
+                          dur: 2300;
+                          loop: true;
+                          dir: alternate" 
+               type="point" intensity="0.45" position="1 10 20" color="#7194ab"></a-light>
+      <a-light animation="property: position; 
+                          from: 90 100 150; 
+                          to: 30 10 -50; 
+                          dur: 2400;
+                          loop: true;
+                          dir: alternate" 
+               type="point" intensity="0.45" position="1 10 20" color="#7194ab"></a-light>
+      <a-light animation="property: position; 
+                          from: -80 10 0; 
+                          to: 80 100 120; 
+                          dur: 2500;
+                          loop: true;
+                          dir: alternate" 
+               type="point" intensity="0.45" position="1 10 20" color="#7194ab"></a-light>
+      <a-light animation="property: position; 
+                          from: -30 10 90; 
+                          to: 10 100 100; 
+                          dur: 2600;
+                          loop: true;
+                          dir: alternate" 
+               type="point" intensity="0.45" position="1 10 20" color="#7194ab"></a-light>
+      
+      <a-sky src="#skyTexture"></a-sky>
+  
+      <script type="text/javascript" src="functions.js"></script>
+      
+    </a-scene>
+  </body>
+</html>
